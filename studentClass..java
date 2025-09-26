@@ -1,4 +1,4 @@
-
+package student_prgram;
 import java.util.Scanner;
 
 public class studentClass {
@@ -14,38 +14,40 @@ public class studentClass {
 
         System.out.print("Enter your surname: ");
         this.password = sc.nextLine();
+        
     }
-
+ 
     void printInfo() {
         System.out.println(username + " " + password);
     }
-
+    
     void printInfo(String str) {
-        System.out.println(str);
+    	 System.out.println(str);
     }
 
     void message() {
-        // Fixed logic: check username and password separately
-        if (username.equals("sachin") && password.equals("rathod")) {
+        if(password.equals("sachin") && password.equals("rathod")) {
             System.out.println("Sachin, you're logged in!");
         } else {
             System.out.println("Please log in first.");
         }
     }
-
-    // Make subclass static or move it outside
-    static class SubClass extends studentClass {
-        void display() {
-            System.out.println("Extended class: " + super.username);
-        }
+    class subClass extends studentClass{
+    	void dispaly() {
+    	System.out.println("extend class" + username);
+    	}
     }
-
     public static void main(String[] args) {
-        SubClass s1 = new SubClass(); // 👈 input happens here
-
+    	subClass s1 = new subClass(); // 👈 input happens here
+        
         s1.printInfo();
         s1.printInfo("sachin");
         s1.message();
-        s1.display();
+        s1.dispaly();
     }
+
+	private void dispaly() {
+		// TODO Auto-generated method stub
+		
+	}
 }
