@@ -1,12 +1,12 @@
 package student_prgram;
 import java.util.Scanner;
 
-public class studentClass {
+public class empClass {
     private String username;
     private String password;
 
     // Constructor that takes input from user
-    studentClass() {
+    empClass() {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter your first name: ");
@@ -32,13 +32,13 @@ public class studentClass {
             System.out.println("Please log in first.");
         }
     }
-    class subClass extends studentClass{
+    class subClass extends empClass{
     	void dispaly() {
     	System.out.println("extend class" + username);
     	}
     }
     public static void main(String[] args) {
-    	subClass s1 = new subClass(); // 👈 input happens here
+    	empClass s1 = new empClass(); // 👈 input happens here
         
         s1.printInfo();
         s1.printInfo("sachin");
