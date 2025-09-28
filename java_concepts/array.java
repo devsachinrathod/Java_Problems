@@ -10,13 +10,13 @@ public class array {
 
         ArrayList<String> newArr = new ArrayList<>();
 
-        for(int i = 0; i < names.length; i++) {
-            if (names[i].equals("laya") || names[i].equals("tanu")) {
-                newArr.add(names[i]);
+        // for(int i = 0; i < names.length; i++) {
+        //     if (names[i].equals("laya") || names[i].equals("tanu")) {
+        //         newArr.add(names[i]);
 
-            }
+        //     }
 
-        }
+        // }
         System.out.println(newArr);
     }
 
