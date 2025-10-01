@@ -1,4 +1,4 @@
-class Animal1 {
+ class Animal1 {
     private String a = "hello super function";
     Animal1() {
         System.out.println("Animal constructor called");
