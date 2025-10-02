@@ -1,27 +1,67 @@
+// interface Extra{
+//     void rathod();
+// }
+// class Student{
+//     int id;
+//     String name;
+//     Student(int id, String name){
+//         this.id = id;
+//         this.name = name;
+//     }
+//     void display(){
+//         System.out.println(id+"Techer"+name);
+//     }
+// }
+// public class Anony {
+//     public static void main(String[] args){
+//         Extra s1 = new Student(101, "Alice"){
+//             // @Override
+//             public void rathod(){
+//                    super.display();
+//                 System.out.println(id+" "+name+" - This is an anonymous class");
+//             }
+//         };
 
-class Student{
+//         s1.rathod();
+//     }
+// }
+interface Extra {
+void personInfo(); 
+    void rathod();
+}
+
+abstract class Student implements Extra {
+
     int id;
     String name;
-    Student(int id, String name){
+
+    Student(int id, String name) {
         this.id = id;
         this.name = name;
     }
-    void display(){
-        System.out.println(id+"Techer"+name);
+
+    void display() {
+        System.out.println(id + " Teacher " + name);
     }
 }
+
 public class Anony {
-    public static void main(String[] args){
-        Student s1 = new Student(101, "Alice"){
-         
+
+    public static void main(String[] args) {
+        Extra s1 = new Student(101, "Alice") {
+
+            public void personInfo() {
+             System.out.println("This personal information method is called");
+            }
+
             @Override
-            void display(){
-                   super.display();
-                System.out.println(id+" "+name+" - This is an anonymous class");
+            public void rathod() {
+                     
+                super.display();
+                System.out.println(id + " " + name + " - This is an anonymous class");
             }
         };
-       
-        s1.display();
-
+        s1.rathod(); 
+        s1.personInfo();// ✅ Now allowed
     }
 }
