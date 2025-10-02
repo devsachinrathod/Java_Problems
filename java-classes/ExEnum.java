@@ -37,11 +37,26 @@ enum Level {
         return description;
     }
 }
+enum Size  {
+    SMALL("Small"), MEDIUM("Medium"), LARGE("Large"), EXTRALARGE("ExtraLarge");
 
+    String Sizes;
+
+    Size(String data){
+        this.Sizes = data;
+    }
+
+    public String getSize() {
+        return Sizes;
+    }
+}
 public class ExEnum{
     public static void main(String[] args) {
         Level myVar = Level.RED;
         Level myLevel = Level.PINK;
+        Size mySize = Size.MEDIUM;
+
+        System.out.println("Value: " + mySize);            // MEDIUM
 
         System.out.println("Value: " + myVar);            // MEDIUM
         System.out.println("Rank: " + myVar.getRank());
