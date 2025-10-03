@@ -1,11 +1,15 @@
-abstract class b{
-    abstract void show();
+ interface  b{
+    public void show();
+
+    int a =10;  // by default static and final
+
 
 }
 
-class Ab extends b{
+class Ab implements  b{
     @Override
-    void show(){
+    public void show(){
+        System.out.println("A:"+ a);
         System.out.println("Abstract class method implemented");
     }
 
