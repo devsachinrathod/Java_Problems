@@ -54,24 +54,34 @@ class StudentMethod extends StudentInfo {
         }
         
     }
-   static void ReadData() {
-        // read data from file
+  //  static void ReadData() {
+  //       // read data from file
+  //       File fileObj = new File("student-admission.txt");
+  //       try (Scanner fileReader = new Scanner(fileObj)) {
+  //           while (fileReader.hasNextLine()) {
+  //               String data = fileReader.nextLine();
+  //               System.out.println(data);
+  //           }
+  //       } catch (IOException e) {
+  //           e.printStackTrace();
+  //       }
+  //   }
+   static void readByBufferedReader() {
+        // read data from file using BufferedReader
         File fileObj = new File("student-admission.txt");
-        try (Scanner fileReader = new Scanner(fileObj)) {
-            while (fileReader.hasNextLine()) {
-                String data = fileReader.nextLine();
-                System.out.println(data);
+        try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(fileObj))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    
-
+   }
     public static void main(String[] args) {
         StudentMethod m1 = new StudentMethod();
         m1.getInputs();
         m1.storeData();
-        ReadData();
+        readByBufferedReader();
             }
 }

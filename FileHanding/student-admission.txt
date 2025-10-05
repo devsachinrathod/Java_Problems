@@ -44,3 +44,9 @@ Student Age: 32
 Student Address: Pune
 Student Academic: sy
 
+Student Name: Rahul Bro
+Student Fees: 2600
+Student Age: 32
+Student Address: Maharastra
+Student Academic: ITI
+
