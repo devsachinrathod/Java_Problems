@@ -42,12 +42,26 @@ class StudentMethod extends StudentInfo {
         File fileObj = new File("student-admission.txt");
         try (FileWriter file = new FileWriter(fileObj, true)) { // append = true
            String path = fileObj.getAbsolutePath();
+           System.out.println("this is the path for where is file written"+path);
             file.write("Student Name: " + name + System.lineSeparator());
             file.write("Student Fees: " + fees + System.lineSeparator());
             file.write("Student Age: " + age + System.lineSeparator());
             file.write("Student Address: " + address + System.lineSeparator());
             file.write("Student Academic: " + academic + System.lineSeparator());
             file.write(System.lineSeparator()); // blank line
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+    }
+   static void ReadData() {
+        // read data from file
+        File fileObj = new File("student-admission.txt");
+        try (Scanner fileReader = new Scanner(fileObj)) {
+            while (fileReader.hasNextLine()) {
+                String data = fileReader.nextLine();
+                System.out.println(data);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -58,5 +72,6 @@ class StudentMethod extends StudentInfo {
         StudentMethod m1 = new StudentMethod();
         m1.getInputs();
         m1.storeData();
-    }
+        ReadData();
+            }
 }
