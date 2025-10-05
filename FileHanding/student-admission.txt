@@ -1,0 +1,34 @@
+Student Name: Sachin
+Student Fees: 20600
+Student Age: 21
+Student Address: Nanded, Maharashtra
+Student Academic: TYBCA
+
+Student Name: SachinStudent Fees: 20600
+Student Age: 21
+Student Address: Nanded, Maharashtra
+Student Academic: TYBCA
+
+Student Name: HimanshiStudent Fees: 20600
+Student Age: 19
+Student Address: Hiwara
+Student Academic: ,
+
+Student Name: Tanu dipak adhagale
+Student Fees: 20600
+Student Age: 18
+Student Address: Beldary
+Student Academic: ,
+
+Student Name: 
+Student Fees: 21
+Student Age: 21
+Student Address: da
+Student Academic: 
+
+Student Name: diapk
+Student Fees: 32
+Student Age: 2
+Student Address: mm
+Student Academic: TYBCA
+
