@@ -23,15 +23,17 @@ import java.util.HashMap;
 //         System.out.println(cars);
 //     }
 // }
+import java.util.ArrayList;
 
+ class Ds {
+  public static void main(String[] args) {
+    ArrayList<String> cars = new ArrayList<String>();
+    cars.add("Volvo");
+    cars.add("BMW");
+    cars.add("Ford");
 
-class ds{
-    public static void main(String[] args) {
-        HashMap<String , String> emp = new HashMap<String , String>();
-        emp.put("sachin", "TYBCA");
-        emp.put("diapk", "SYBCA"); 
+    cars.add(0, "Mazda"); // Insert element at the beginning of the list (0)
 
-        System.out.println("data"+ emp);
-    }
-
+    System.out.println(cars);
+  }
 }
