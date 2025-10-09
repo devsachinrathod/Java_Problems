@@ -1,6 +1,4 @@
-import java.util.LinkedList;
 import java.util.ArrayList;
-import  java.util.Collections;
 
 class Main {
   public static void main(String[] args) {
@@ -12,7 +10,7 @@ class Main {
     myNumbers.add(8);
     myNumbers.add(12);
 
-    Collections.sort(myNumbers);  // Sort myNumbers
+    // Collections.rotate(myNumbers-> distance);();  // Sort myNumbers
 
     for (int i : myNumbers) {
       System.out.println(i);
