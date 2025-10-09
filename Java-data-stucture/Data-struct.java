@@ -1,28 +1,4 @@
 
-import java.util.HashMap;
-
-
-// import java.util.HashSet;
-
-// class Ds {
-
-//     public static void main(String[] args) {
-//         System.out.println(".()");
-//         HashSet<String> cars = new HashSet<String>();
-//         cars.add("Volvo");
-//         cars.add("BMW");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("Ford");
-//         cars.add("BMW");  // Duplicate
-//         cars.add("Mazda");
-//         System.out.println(cars);
-//     }
-// }
 import java.util.ArrayList;
 
  class Ds {
@@ -31,9 +7,10 @@ import java.util.ArrayList;
     cars.add("Volvo");
     cars.add("BMW");
     cars.add("Ford");
-
-    cars.add(0, "Mazda"); // Insert element at the beginning of the list (0)
-
-    System.out.println(cars);
+    cars.add(0, "Mazda");
+    cars.set(1, "lembi"); // Insert element at the beginning of the list (0)
+    System.out.println(cars.get(2));
+    System.out.println(cars);   
+    System.out.println(cars.size());
   }
 }
