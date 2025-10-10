@@ -9,6 +9,8 @@ class Hashmap{
     System.out.println(map.get("banana")); // prints 2  
     System.out.println(map.get("orange")); // prints 3
     System.out.println(map.containsKey("apple")); // prints true
-    System.out.println(map); // prints false
+    for(String key : map.keySet()){
+      System.out.println(key + " " + map.get(key));
+    }
   }
 }
