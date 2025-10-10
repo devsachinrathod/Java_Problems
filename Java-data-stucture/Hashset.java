@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Example {
+class Example{
   public static void main(String[] args) {
     LinkedHashSet<String> set = new LinkedHashSet<>();
 
