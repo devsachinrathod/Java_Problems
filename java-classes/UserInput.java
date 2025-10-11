@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 class UserInput {
-
     String name;
     int age;
 
