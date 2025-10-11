@@ -13,9 +13,7 @@ class Hashmap{
     //   System.out.println(key + " " + map.get(key));
     // }
      // Create a HashMap object called capitalCities
-    HashMap<String, String> capitalCities = new HashMap<String, String>();
-
-    // Add keys and values (Country, City)
+TreeMap<String, String> capitalCities = new TreeMap<>();
     capitalCities.put("England", "London");
     capitalCities.put("India", "New Dehli");
     capitalCities.put("Austria", "Wien");
@@ -23,9 +21,6 @@ class Hashmap{
     capitalCities.put("Norway", "Oslo"); // Duplicate
     capitalCities.put("USA", "Washington DC");
 
-    
-    System.out.println(capitalCities.remove("England"));
-
-    System.out.println(capitalCities.get("London"));
+    System.out.println(capitalCities);
   }
 };
