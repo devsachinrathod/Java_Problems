@@ -1,26 +1,24 @@
+
 import java.util.*;
 
-class Example{
-  public static void main(String[] args) {
-    LinkedHashSet<String> set = new LinkedHashSet<>();
+class Example {
 
-    set.add("Apple");
-    set.add("Banana");
-    set.add("Cherry");
-    set.add("Apple"); // duplicate, will be ignored
+    public static void main(String[] args) {
+        LinkedHashSet<String> set = new LinkedHashSet<>();
 
-    System.out.println(set); // [Apple, Banana, Cherry]
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Cherry");
+        set.add("Apple"); // duplicate, will be ignored
 
-    // Iteration
-    for (String fruit : set) {
-      System.out.println(fruit);
+        System.out.println(set); // [Apple, Banana, Cherry]
+        if(set.contains("Banana")) {
+            System.out.println("There is Banana");
+        }
+        Iterator<String> it = set.iterator();
+        while (it.hasNext()) {
+            System.out.println("There is all the items: " + it.next());
+        }
+        System.out.println(set); // [Banana, Cherry]
     }
-
-    // Check presence
-    System.out.println("Contains Banana? " + set.contains("Banana")); // true
-
-    // Remove element
-    set.remove("Apple");
-    System.out.println(set); // [Banana, Cherry]
-  }
 }

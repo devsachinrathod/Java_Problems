@@ -11,7 +11,7 @@
 // 	 {
 // 		 System.out.println(s+ "sucessfully enrolled");
 // 	 }
-	
+
 //  }
 //  public static void main(String[] args) {
 // 	 Student s1 = new Student(23, "ravi");
@@ -24,10 +24,9 @@
 // 	 catch(UnderAgeException e) {
 // 		 System.out.println(e.getMessage());
 // 	 }
-
 //  }
+abstract class AnimalDemo {
 
-abstract class Animal {
     // abstract method (no body)
     abstract void sound();
 
@@ -35,20 +34,37 @@ abstract class Animal {
     void sleep() {
         System.out.println("Sleeping...");
     }
-}
 
-class Dog extends Animal {
-    // must implement abstract method
-    @Override
-    void sound() {
-        System.out.println("Bark");
+    static void arrayBinarySearch(int[] arr, int k) {
+        if (arr == null || arr.length == 0) {
+            System.out.println("Array is empty");
+            return;
+        }
+        // binary search requires a sorted array; sort a copy to preserve the original array
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] == k) {
+                System.out.println("Element found at index " + mid);
+                return;
+            } else if (arr[mid] < k) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return;
     }
-}
-
-public class index {
     public static void main(String[] args) {
-        Animal a = new Dog(); // reference = abstract, object = Dog
-        a.sound();  // Bark
-        a.sleep();  // Sleeping...
+        AnimalDemo a = new AnimalDemo() {
+            @Override
+            void sound() {
+                System.out.println("Animal makes a sound");
+            }
+        };
+// Sleeping...
+        arrayBinarySearch(new int[]{5, 3, 8, 1}, 8);
     }
+
 }
