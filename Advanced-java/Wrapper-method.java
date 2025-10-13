@@ -1,29 +1,25 @@
 
 class WrapperDemo {
-    
+
     public static void main(String[] args) {/*...*/
-    //  ArrayList<Integer> list = new ArrayList<>();
-    //  list.add(10);
-    //  list.add(20);  
-    //  list.add(30);
-    
-    // System.out.println("This is the list of Integer : " + list);
+        //  ArrayList<Integer> list = new ArrayList<>();
+        //  list.add(10);
+        //  list.add(20);  
+        //  list.add(30);
+
+        // System.out.println("This is the list of Integer : " + list);
 
 // ArrayList<Boolean> list = new ArrayList<>();
 // list.add(true);
 // list.add(false);
 // list.add(true);
 // list.add(false);
-
 // System.out.println("This is the list of Boolean : " + list);
-
 // int count =0;
-
 // for(int i = 0 ; i < list.size() ; i++){
 //     if(list.get(i) == true){
 //         count++;
 //     }
-
 // }
 // // if(list.contains(true)){
 // //     count++;
@@ -40,13 +36,21 @@ class WrapperDemo {
 //     {
 //         System.out.println("This is false");
 //     }   
-int num = 10;
+        int num = 10;
 
 // Wrapping: converting primitive to object (boxing)
-Integer wrappedNum = Integer.valueOf(num);
+        Integer wrappedNum = Integer.valueOf(num);
 
+        System.out.println("This is the wrapped number : " + wrappedNum);
 
-System.out.println("This is the wrapped number : " + wrappedNum);
+        Double num2 = 20.4;
 
+        System.out.println("This is the wrapped number : " + num2.toString());
+        System.err.println("Type of num2: " + num2.getClass().getSimpleName());
+
+System.out.println("-------------------------------------------------------------------");
+           Integer myInt = 100;
+    String myString = myInt.toString();
+    System.out.println(myString.length());
     }
 }
