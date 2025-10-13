@@ -1,4 +1,3 @@
-import  java.util.*;
 
 class WrapperDemo {
     
@@ -10,36 +9,44 @@ class WrapperDemo {
     
     // System.out.println("This is the list of Integer : " + list);
 
-ArrayList<Boolean> list = new ArrayList<>();
-list.add(true);
-list.add(false);
-list.add(true);
-list.add(false);
+// ArrayList<Boolean> list = new ArrayList<>();
+// list.add(true);
+// list.add(false);
+// list.add(true);
+// list.add(false);
 
-System.out.println("This is the list of Boolean : " + list);
+// System.out.println("This is the list of Boolean : " + list);
 
-int count =0;
+// int count =0;
 
-for(int i = 0 ; i < list.size() ; i++){
-    if(list.get(i) == true){
-        count++;
-    }
-    
-}
-// if(list.contains(true)){
-//     count++;
+// for(int i = 0 ; i < list.size() ; i++){
+//     if(list.get(i) == true){
+//         count++;
+//     }
+
 // }
-// else{
-//   System.out.println("Not found the ture in list");
-// }
-    if(list.contains(true))
-    {
-        System.out.println("This is true" );
-        System.out.println("This is the count : " + count);
+// // if(list.contains(true)){
+// //     count++;
+// // }
+// // else{
+// //   System.out.println("Not found the ture in list");
+// // }
+//     if(list.contains(true))
+//     {
+//         System.out.println("This is true" );
+//         System.out.println("This is the count : " + count);
+//     }
+//     else
+//     {
+//         System.out.println("This is false");
+//     }   
+int num = 10;
+
+// Wrapping: converting primitive to object (boxing)
+Integer wrappedNum = Integer.valueOf(num);
+
+
+System.out.println("This is the wrapped number : " + wrappedNum);
+
     }
-    else
-    {
-        System.out.println("This is false");
-    }   
-}
 }
