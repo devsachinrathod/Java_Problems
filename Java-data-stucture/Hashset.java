@@ -15,6 +15,10 @@ class Example {
         if(set.contains("Banana")) {
             System.out.println("There is Banana");
         }
+        // shuffle requires a List, so convert the set to a list, shuffle it, and print the shuffled list
+        List<String> list = new ArrayList<>(set);
+        Collections.shuffle(list);
+        System.out.println(list);
         Iterator<String> it = set.iterator();
         while (it.hasNext()) {
             System.out.println("There is all the items: " + it.next());
