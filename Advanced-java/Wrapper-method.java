@@ -1,0 +1,45 @@
+import  java.util.*;
+
+class WrapperDemo {
+    
+    public static void main(String[] args) {/*...*/
+    //  ArrayList<Integer> list = new ArrayList<>();
+    //  list.add(10);
+    //  list.add(20);  
+    //  list.add(30);
+    
+    // System.out.println("This is the list of Integer : " + list);
+
+ArrayList<Boolean> list = new ArrayList<>();
+list.add(true);
+list.add(false);
+list.add(true);
+list.add(false);
+
+System.out.println("This is the list of Boolean : " + list);
+
+int count =0;
+
+for(int i = 0 ; i < list.size() ; i++){
+    if(list.get(i) == true){
+        count++;
+    }
+    
+}
+// if(list.contains(true)){
+//     count++;
+// }
+// else{
+//   System.out.println("Not found the ture in list");
+// }
+    if(list.contains(true))
+    {
+        System.out.println("This is true" );
+        System.out.println("This is the count : " + count);
+    }
+    else
+    {
+        System.out.println("This is false");
+    }   
+}
+}
