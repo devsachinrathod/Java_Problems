@@ -48,9 +48,10 @@ class WrapperDemo {
         System.out.println("This is the wrapped number : " + num2.toString());
         System.err.println("Type of num2: " + num2.getClass().getSimpleName());
 
-System.out.println("-------------------------------------------------------------------");
-           Integer myInt = 100;
-    String myString = myInt.toString();
-    System.out.println(myString.length());
+        System.out.println("-------------------------------------------------------------------");
+        Integer myInt = 100;
+
+        String myString = myInt.toString();
+        System.out.println(myString.length());
     }
 }

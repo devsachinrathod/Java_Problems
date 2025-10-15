@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class Example {
+class Example{
 
     public static void main(String[] args) {
         LinkedHashSet<String> set = new LinkedHashSet<>();
@@ -12,7 +12,7 @@ class Example {
         set.add("Apple"); // duplicate, will be ignored
 
         System.out.println(set); // [Apple, Banana, Cherry]
-        if(set.contains("Banana")) {
+        if (set.contains("Banana")) {
             System.out.println("There is Banana");
         }
         // shuffle requires a List, so convert the set to a list, shuffle it, and print the shuffled list
