@@ -53,5 +53,13 @@ class WrapperDemo {
 
         String myString = myInt.toString();
         System.out.println(myString.length());
+
+        System.out.println("-------------------------------------------------------------------");  
+        Integer myInteger = 100;
+        int myPrimitiveInt = myInteger.intValue();
+        System.out.println(myPrimitiveInt);
+
+
+        
     }
 }
