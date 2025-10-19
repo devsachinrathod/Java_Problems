@@ -24,7 +24,7 @@ class ReciverMoneyAccount implements acountDetails{
     }
 }
 
-class SenderAccount extends ReciverMoneyAccount{
+class outerClass extends ReciverMoneyAccount{
     void transferMoney(){
         int transferAmount = 2000;
         System.out.println("Transfer money using sender account");
@@ -37,7 +37,7 @@ class SenderAccount extends ReciverMoneyAccount{
     }
 
     public static void main(String[] args){
-        SenderAccount sa = new SenderAccount();
+        outerClass sa = new outerClass();
         sa.showAccountDetails();
         sa.transferMoney();
     }
