@@ -13,9 +13,11 @@ class Inter implements Data3{
     public void show(){
         System.out.println("Interface method implemented");
     }
+    @Override
     public void display(){
         System.out.println("Data2 interface method implemented");
     }
+    @Override
     public void print(){
         System.out.println("Data3 interface method implemented");
     }

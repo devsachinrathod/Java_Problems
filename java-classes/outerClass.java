@@ -1,36 +1,45 @@
 
-class outerClass {
+abstract  interface acountDetails{
+    // void showAccountDetails();
+    int ACCOUNT = 272632;
+    int AMOUNT = 50000;
+} 
 
-    outerClass() {
-        System.out.println("Outer class constructor called");
+class ReciverMoneyAccount implements acountDetails{
+    // @Override
+    public void showAccountDetails(){
+        System.out.println("Account number is: " + ACCOUNT);
+        System.out.println("Amount in account is: " + AMOUNT);
     }
 
-    void show() {
-        System.out.println("This is the outer class");
+    void fetchBanlance(){
+        System.out.println("Fetch balance using reciver money account");
+        System.out.println("Current balance is: " + AMOUNT);
     }
 
-    class NestedInnerClass extends  outerClass{
+    public static void main(String[] args){
+        ReciverMoneyAccount rma = new ReciverMoneyAccount();
+        rma.showAccountDetails();
+        rma.fetchBanlance();
+    }
+}
 
-        void display(){
-            super.show();
-            System.out.println("This is a nested inner class");
+class SenderAccount extends ReciverMoneyAccount{
+    void transferMoney(){
+        int transferAmount = 2000;
+        System.out.println("Transfer money using sender account");
+        if(AMOUNT >= transferAmount){
+            System.out.println("Remaining balance: " + (AMOUNT - transferAmount));
+            System.out.println("Money transferred successfully");
+        } else {
+            System.out.println("Insufficient balance");
         }
-
-        class DeepNestedClass {
-            int b = 10;
-            void print() {
-                System.out.println("This is a deep nested class");
-            }
-        }
     }
 
-    public static void main(String[] args) {
-        outerClass outer = new outerClass();
-        outer.show();
-        outerClass.NestedInnerClass inner = outer.new NestedInnerClass();
-        inner.display();
-        outerClass.NestedInnerClass.DeepNestedClass deep = inner.new DeepNestedClass();
-        deep.print();
-        System.out.println(deep.b);
+    public static void main(String[] args){
+        SenderAccount sa = new SenderAccount();
+        sa.showAccountDetails();
+        sa.transferMoney();
     }
+
 }
