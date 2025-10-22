@@ -41,7 +41,6 @@ class outerClass extends ReciverMoneyAccount implements senderAccount{
         System.out.println("Account number is: " + acountNumber);
         System.out.println("Account holder name is: " + acountHolderName);
         System.out.println("Balance in account is: " + balance );
-        
     }
 
      void transferMoneyTo() {
@@ -52,6 +51,7 @@ System.out.println();
 
         System.out.println("You entered amount: " + amount);
             System.out.println("Remaining balance: " + (AMOUNT - amount));
+            System.out.println("added : " +( balance + amount));
                   if(AMOUNT >= amount){
 
             System.out.println("Money transferred successfully");
@@ -60,10 +60,6 @@ System.out.println();
         }
         scan.close(); // optional but good practice
     }
-    void fetchReciversBalance(){
-        System.out.println("Fetch balance using sender money account");
-        System.out.println("Current balance is: " + balance);
-    }
   
    
     public static void main(String[] args){
@@ -71,7 +67,6 @@ System.out.println();
         sa.senderAccountDetail();
         sa.showAccountDetails();
         sa.transferMoneyTo();
-        sa.fetchReciversBalance();
     }
 
 }
