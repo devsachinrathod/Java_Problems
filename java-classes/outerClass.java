@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 abstract  interface acountDetails{
     // void showAccountDetails();
@@ -24,22 +26,52 @@ class ReciverMoneyAccount implements acountDetails{
     }
 }
 
-class outerClass extends ReciverMoneyAccount{
-    void transferMoney(){
-        int transferAmount = 2000;
-        System.out.println("Transfer money using sender account");
-        if(AMOUNT >= transferAmount){
-            System.out.println("Remaining balance: " + (AMOUNT - transferAmount));
+interface senderAccount{
+    int acountNumber = 123456;
+    String acountHolderName = "Ravi Kumar";
+    int balance = 20000;
+
+}
+class outerClass extends ReciverMoneyAccount implements senderAccount{
+
+    void senderAccountDetail(){
+
+        System.out.println("Reciver Account detaills :");
+        System.out.println();
+        System.out.println("Account number is: " + acountNumber);
+        System.out.println("Account holder name is: " + acountHolderName);
+        System.out.println("Balance in account is: " + balance );
+        
+    }
+
+     void transferMoneyTo() {
+        Scanner scan = new Scanner(System.in);  // create scanner object
+System.out.println();
+        System.out.print("Please enter amount to pay: ");
+        int amount = scan.nextInt();  // read integer input
+
+        System.out.println("You entered amount: " + amount);
+            System.out.println("Remaining balance: " + (AMOUNT - amount));
+                  if(AMOUNT >= amount){
+
             System.out.println("Money transferred successfully");
         } else {
             System.out.println("Insufficient balance");
         }
+        scan.close(); // optional but good practice
     }
-
+    void fetchReciversBalance(){
+        System.out.println("Fetch balance using sender money account");
+        System.out.println("Current balance is: " + balance);
+    }
+  
+   
     public static void main(String[] args){
         outerClass sa = new outerClass();
+        sa.senderAccountDetail();
         sa.showAccountDetails();
-        sa.transferMoney();
+        sa.transferMoneyTo();
+        sa.fetchReciversBalance();
     }
 
 }
