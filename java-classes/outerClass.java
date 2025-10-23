@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 abstract  interface acountDetails{
     // void showAccountDetails();
     int ACCOUNT = 272632;
