@@ -37,12 +37,11 @@ class Adv extends AnimalDemo implements HomeLone {
         
     }
 
-    
-
-
     public void arrayNumber() {
         arr.add(12);
         System.err.println("Here show array number");
+        
+ 
     }
     public void arrayNumber(int a) {
         arr.add(a);
@@ -53,7 +52,11 @@ class Adv extends AnimalDemo implements HomeLone {
         arr.add(100);
         System.out.println("Data added: " + arr);
         System.out.println("Map data: " + map);
+           for (int i : arr){
+        System.out.println("there is all the element : " + i);
     }
+    }
+
 
     public static void main(String[] args) {
         Adv A1 = new Adv();

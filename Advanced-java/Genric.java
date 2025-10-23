@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-class NumberBox<T> {
+class NumberBox<T>{
 
     ArrayList<T> myNumbers = new ArrayList<>(); // Generic ArrayList
 
@@ -29,8 +29,8 @@ class NumberBox<T> {
         map.put("key", "value");
         map.put("key2", "value2");
         map.put("key3", "value3");
-     
-     System.out.println("There is the value of key is " + map.keySet() + "add" +map.values());
+
+        System.out.println("There is the value of key is " + map.keySet() + "add" + map.values());
         arr1.add(true);
         arr1.add(false);
         arr1.add(true);
