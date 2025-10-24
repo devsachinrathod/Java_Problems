@@ -44,7 +44,7 @@ class WrapperDemo {
         System.out.println("This is the wrapped number : " + wrappedNum);
 
         Double num2 = 20.4;
-
+  
         System.out.println("This is the wrapped number : " + num2.toString());
         System.err.println("Type of num2: " + num2.getClass().getSimpleName());
 
