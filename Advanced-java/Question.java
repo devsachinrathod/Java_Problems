@@ -17,6 +17,19 @@ class FindSimilarElement {
                 }
             }
         }
+        for(int j = len-1; j>0; j--) {
+            if(arr[j] == arr[j-1]) {
+                if(!dup.contains(arr[j])) {
+                    dup.add(arr[j]);
+                    System.out.print(arr[j] + " added");
+                }
+            }
+        }   
+
+        for(int i : arr) {
+            if(!dup.contains(i));
+            System.out.print(i + " ");
+        }
 
         System.out.println("Duplicate elements: " + dup);
     }
