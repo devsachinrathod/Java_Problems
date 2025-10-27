@@ -44,7 +44,7 @@ class WrapperDemo {
         System.out.println("This is the wrapped number : " + wrappedNum);
 
         Double num2 = 20.4;
-  
+
         System.out.println("This is the wrapped number : " + num2.toString());
         System.err.println("Type of num2: " + num2.getClass().getSimpleName());
 
@@ -54,12 +54,21 @@ class WrapperDemo {
         String myString = myInt.toString();
         System.out.println(myString.length());
 
-        System.out.println("-------------------------------------------------------------------");  
+        System.out.println("-------------------------------------------------------------------");
         Integer myInteger = 100;
         int myPrimitiveInt = myInteger.intValue();
         System.out.println(myPrimitiveInt);
 
+        System.out.println("--------------------x27/10/2025---------------------");
 
+        Integer sachin = 103;
+        try {
         
+            String sachinln = sachin.toString();
+            System.out.println(sachinln.length());
+        } catch (Exception e) {
+            System.out.println("Exception occured" + e);
+        }
+
     }
 }
