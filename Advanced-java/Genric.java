@@ -3,6 +3,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 class NumberBox<T>{
+   T a;
+    void set(T a){
+        this.a = a;
+    }
+
+    T get(){
+        return a;
+    }
 
     ArrayList<T> myNumbers = new ArrayList<>(); // Generic ArrayList
 
@@ -21,7 +29,11 @@ class NumberBox<T>{
     }
 
     public static void main(String[] args) {
-        NumberBox<String> box = new NumberBox<>();
+        NumberBox<Integer> box = new NumberBox<>();
+        box.add(23);
+        box.set(10);
+        System.out.println("Value: " + box.get());
+        // NumberBox<String> box = new NumberBox<>();
         ArrayList<String> arr = new ArrayList<>();
         ArrayList<Boolean> arr1 = new ArrayList<>();
         HashMap<String, String> map = new HashMap<>();
@@ -36,8 +48,8 @@ class NumberBox<T>{
         arr1.add(true);
         arr1.add(false);
         arr1.add(false);
-        box.add("sachin ");
-        box.add("rahul");
+        // box.add("sachin ");
+        // box.add("rahul");
 
         System.out.println(arr1.contains(true));
         System.out.println(arr1.contains(false));
@@ -51,10 +63,10 @@ class NumberBox<T>{
 
         System.out.println(arr.contains("sachin "));
 
-        box.add("sachin ");
-        box.add("rahul");
-        box.add("Himanshu");
-        box.add("Ritesh");
+        // box.add("sachin ");
+        // box.add("rahul");
+        // box.add("Himanshu");
+        // box.add("Ritesh");
 
         box.display();
         box.display();
