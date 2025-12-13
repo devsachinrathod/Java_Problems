@@ -31,6 +31,9 @@ class Lab {
         Hello h1 = () -> System.out.println("Hello from no-parameter lambda");
         h1.say();
 
+        Hello hHello = () -> System.out.println("Hello World from Lambda!");
+        hHello.say();
+
         // 2️⃣ Lambda Returning a String
         localString ls = () -> "Hello, this is a local string!";
         System.out.println(ls.show());
