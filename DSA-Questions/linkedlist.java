@@ -136,6 +136,37 @@ Node head;
 	   currentNode = currentNode.next;
 	  }
 	}
+
+	public void insertLast(int val){
+		if(head == null){
+			insertValue(val);
+			return;
+		}
+		Node newNode = new Node(val);
+		Node currentNode = head;
+		while(currentNode.next != null){
+			currentNode = currentNode.next;
+		}
+		currentNode.next = newNode;
+	}
+	public void deleteValue(int val){
+		if(head == null){
+			return;
+		}
+		if(head.data == val){
+			head = head.next;
+			return;
+		}
+		Node currentNode = head;	
+		while(currentNode.next != null && currentNode.next.data != val){
+			currentNode = currentNode.next;
+		}
+		if(currentNode.next == null){
+			return;
+		}
+		currentNode.next = currentNode.next.next;
+		
+		}
 	
 		public static void main( String[] args){
 		
@@ -143,6 +174,7 @@ Node head;
    l1.insertValue(12);
    l1.insertValue(12);
    l1.insertValue(12);
+	 l1.insertLast(45);
    l1.printValue();
   
 	}
