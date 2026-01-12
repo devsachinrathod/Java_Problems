@@ -1,4 +1,4 @@
-// // class Node {
+
 // //     int val;
 // //     Node next;
     
@@ -193,17 +193,16 @@ public void deleteMiddleValue(int val){
 public void reverse() {
     Node prev = null;
     Node current = head;
-    Node next = null;
 
     while (current != null) {
-        next = current.next;   // store next node
+        Node next = current.next;   // store next node
         current.next = prev;   // reverse the link
         prev = current;        // move prev forward
         current = next;        // move current forward
     }
-
-    head = prev; // update head to last node
+		   head = prev; // update head to last node
 }
+
 
 		public static void main( String[] args){
 		
