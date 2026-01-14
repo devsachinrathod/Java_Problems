@@ -204,6 +204,7 @@ public void reverse() {
 }
 
 
+
 		public static void main( String[] args){
 		
    linkedlist l1 = new linkedlist();
