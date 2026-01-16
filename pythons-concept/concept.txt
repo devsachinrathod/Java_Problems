@@ -1,0 +1,103 @@
+Fundamentals
+Variables and Data Types
+Variables store data values using assignment (e.g., x = 5). Python supports dynamic typing, automatically inferring types like integers (int: age = 25), floats (float: pi = 3.14), strings (str: name = "Alice"), booleans (bool: is_valid = True), lists (list: fruits = ["apple", "banana"]), tuples (tuple: point = (10, 20)), dictionaries (dict: person = {"name": "Bob", "age": 30}), and sets (set: unique = {1, 2, 3}).
+​
+
+Operators
+Operators perform computations: arithmetic (+, -, *, /, //, %, ** as in result = 10 ** 2 yielding 100), comparison (==, !=, >, <), logical (and, or, not), assignment (=, +=), membership (in, not in), and identity (is, is not).
+​
+
+Control Structures
+Conditional statements use if, elif, else:
+
+text
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+Loops include for (for i in range(5): print(i)) and while (count = 0; while count < 3: print(count); count += 1).
+​
+
+Functions
+Define reusable code with def:
+
+text
+def greet(name):
+    return f"Hello, {name}!"
+print(greet("World"))  # Output: Hello, World!
+Functions support parameters, returns, and defaults (e.g., def add(a, b=0): return a + b).
+​
+
+Key Practices
+Use indentation for blocks (no braces). Comments start with #. Import modules like import math; print(math.sqrt(16)) for extended functionality.
+​
+
+give a structured and readble format
+Python fundamentals are best learned through structured basics like variables, control flow, functions, and data structures, each with clear examples for readability. This format organizes concepts hierarchically with code snippets and outputs. Practice these in a Python interpreter for mastery.
+
+Variables & Data Types
+Store and manipulate data dynamically without declaring types.
+
+Integers/Float: age = 25 or height = 5.9
+​
+
+Strings: name = "Alice"; access via name[0] → 'A'
+​
+
+Booleans: is_adult = True
+​
+
+Lists (mutable): fruits = ["apple", "banana"]; fruits.append("cherry")
+​
+
+Tuples (immutable): point = (10, 20)
+​
+
+Dictionaries: person = {"name": "Bob", "age": 30}; print(person["name"]) → Bob
+​
+
+Example output:
+
+text
+>>> fruits
+['apple', 'banana', 'cherry']
+Operators
+Perform calculations and comparisons.
+
+Category	Examples	Output Example
+Arithmetic	10 + 5, 2 ** 3	15, 8
+Comparison	x > y, a == b	True/False
+Logical	True and False, not True	False, False 
+​
+Control Flow
+Direct program execution with conditions and loops.
+
+If-Else:
+
+python
+age = 20
+if age >= 18:
+    print("Adult")  # Output: Adult
+else:
+    print("Minor")
+For Loop:
+
+python
+for i in range(3):
+    print(i)  # Outputs: 0 1 2
+While Loop:
+
+python
+count = 0
+while count < 3:
+    print(count)
+    count += 1  # Outputs: 0 1 2
+Functions
+Reusable code blocks with def.
+
+python
+def greet(name="World"):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Hello, Alice!
+print(greet())         # Hello, World!
