@@ -64,6 +64,8 @@ for i in student_info:
     if student_info[i] == "sam":
         print("found sam")
         break
+for j in range(len(student_info)):
+    print(student_info[j])
 
     
   
