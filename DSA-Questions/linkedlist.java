@@ -129,13 +129,13 @@ Node head;
 	  head = newNode;
 	  
 	}
-	public void printValue(){
-	  Node currentNode = head;
-	  while(currentNode != null){
-	   System.out.println(currentNode.data);
-	   currentNode = currentNode.next;
-	  }
-	}
+	// public void printValue(){
+	//   Node currentNode = head;
+	//   while(currentNode != null){
+	//    System.out.println(currentNode.data);
+	//    currentNode = currentNode.next;
+	//   }
+	// }
 
 	public void insertLast(int val){
 		if(head == null){
@@ -174,6 +174,7 @@ Node head;
 
 	}
 	
+	
 public void deleteMiddleValue(int val){
 	if(head == null){
 		return;
@@ -203,6 +204,14 @@ public void reverse() {
 		   head = prev; // update head to last node
 }
 
+public void displayLinkedList(){
+	Node currentNode = head;
+	while(currentNode != null){
+		System.out.println(currentNode.data);
+		currentNode = currentNode.next;
+		System.out.println("->");
+	}
+}
 
 
 		public static void main( String[] args){
@@ -225,6 +234,7 @@ public void reverse() {
 	//  l1.printValue();
   	System.out.println("Display in reverse order:");
 	l1.reverse();
+	l1.displayLinkedList();
 	
 
 	}
