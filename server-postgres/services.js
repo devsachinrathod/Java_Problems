@@ -209,6 +209,34 @@ app.post("/feedback", async (req, res) => {
   }
 });
 
+app.put("/feedback/:id", async (req, res) => {
+  const feedbackId = req.params.id;
+  const { name, description, price } = req.body;
+  if (!name || !description || !price) {
+    return res.status(400).json({
+      error: "All fields are required"
+    });
+  }
+
+  const updateQuery = `
+    UPDATE feedback
+    SET name = $1, description = $2, price = $3
+    WHERE id = $4
+    `;
+
+  try {
+    
+    const updatedResult = await pool.query(updateQuery, [name, description, price, feedbackId]);
+    return res.status(200).json({
+      message: "Feedback updated successfully"
+    });
+  } catch (err) {
+    console.error("Error updating feedback:", err);
+    return res.status(500).json({ 
+      error: "Database error"
+    });
+  }
+});
 
 app.get("/feedbacks", async (req, res) => {
   try {
@@ -250,6 +278,33 @@ app.post("/crops", async (req, res) => {
       error: "Database error"
     });
 }
+});
+
+app.put("/crops/:id", async (req, res) => {
+  const cropId = req.params.id;
+  const { name, description, quantity, price, location, contact_info } = req.body;
+  if (!name || !description || !quantity || !price || !location || !contact_info) {
+    return res.status(400).json({
+      error: "All fields are required"
+    });
+  }
+  const updateQuery = `
+    UPDATE crops
+    SET name = $1, description = $2, quantity = $3, price = $4, location = $5, contact_info = $6
+    WHERE id = $7
+    `;
+  try {
+    const updatedResult = await pool.query(updateQuery, [name, description, quantity, price, location, contact_info, cropId]);
+    return res.status(200).json({
+    
+      message: "Crop updated successfully"
+    });
+  } catch (err) {
+    console.error("Error updating crop:", err);
+    return res.status(500).json({
+      error: "Database error"
+    });
+  }
 });
 
 app.get("/all-crops", async (req, res) => {
