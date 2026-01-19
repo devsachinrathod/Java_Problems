@@ -213,6 +213,23 @@ public void displayLinkedList(){
 	}
 }
 
+public void insertAtperticularPosition(int val, int position){
+	Node newNode = new Node(val);
+	if(position == 0){
+		newNode.next = head;
+		head = newNode;
+		return;
+	}
+	Node currentNode = head;
+	for(int i = 0; i < position-1; i++){
+	  
+		currentNode = currentNode.next;
+
+	}
+	newNode.next = currentNode.next;
+	currentNode.next = newNode;
+}
+
 
 		public static void main( String[] args){
 		
