@@ -110,6 +110,8 @@
 
 
 
+
+
 class Node {
        Node next;
 	   int data;
@@ -137,6 +139,7 @@ Node head;
 	//   }
 	// }
 
+
 	public void insertLast(int val){
 		if(head == null){
 			insertValue(val);
@@ -158,6 +161,20 @@ Node head;
 	
 
 		}
+
+ static void displayHello() {
+		System.out.println("Hello, World!");
+	}
+
+public static void calculatingBills(int amount){
+	int discount = 0;
+	if(amount > 1000){
+		discount = amount * 10 / 100;
+	}
+  int finalPayable = amount - discount;
+	System.out.println("Final payable amount: " + finalPayable);
+}
+
 	public void deleteLastValue(){
 		if(head == null){
 			return;
@@ -237,6 +254,7 @@ public void insertAtperticularPosition(int val, int position){
    l1.insertValue(12);
    l1.insertValue(13);
    l1.insertValue(14);
+	 l1.displayHello();
 	
   //  l1.printValue();
 	//  l1.deleteFirstValue();
@@ -252,6 +270,7 @@ public void insertAtperticularPosition(int val, int position){
   	System.out.println("Display in reverse order:");
 	l1.reverse();
 	l1.displayLinkedList();
+	l1.calculatingBills(1500);
 	
 
 	}
